@@ -1,0 +1,246 @@
+@import url("theme.css");
+
+@font-face {
+    font-family: 'Wind Song';
+    src: url('../font/WindSong-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+	background-color: var(--backgroundlight);
+	margin: 0;
+	padding: 0;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+body h1, h2 {
+    font-family: 'Wind Song';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "header"
+    "hero"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    grid-area: header;
+    border-bottom: 2px solid var(--emphasispurple);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    background-color: var(--backgroundlight);
+	margin: 0;
+    padding: 0.8rem 1.2rem;
+}
+
+.header nav ul li a {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5vw;
+}
+
+.header nav ul li a:hover {
+    background-color: var(--shadingpurple);
+    cursor: pointer;
+}
+
+.header nav ul li:visited {
+    color: var(--emphasispurple);
+}
+
+.hero {
+    grid-area: hero;
+    background-image: url("./../photo/t1.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .herochild {
+    background-color: var(--backgroundlight);
+    border: 2px solid var(--emphasispurple);
+    padding: 5rem;
+    text-align: center;
+}
+
+.hero .herochild h1 {
+    color: var(--text);
+    font-size: 4vw; 
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.hero .herochild h2 {
+    color: var(--text);;
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace;
+    font-size: 1.7vw; 
+    font-weight: normal;
+    margin-top: 0.3vw;
+    margin-bottom: 3vw ;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--emphasispurple); 
+    color: var(--backgroundlight); 
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    align-items: center;
+    padding: 0 1rem;
+    gap: 2rem; 
+    font-size: 1vw;
+    text-align: center;
+}
+
+.footer .c1 {
+    display: flex;
+    align-items: center;
+}
+
+.footer .c2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+
+.footer .c2 a{
+    color: var(--backgroundlight);
+    text-decoration: none;
+}
+
+.footer a:visited{
+    color: var(--backgroundlight);
+}
+
+.footer a:hover{
+    color: var(--emphasis);
+}
+
+#divhover {
+    color: var(--text);
+}
+
+#div1 {
+    width: 100%;
+    padding: 1%;
+    height: 3vh;
+    margin-top: 8px;
+    background-color: var(--shadingpurple);
+    margin-top: 2%;
+}
+
+#div2 {
+    width: 0%;
+    height: 100%;
+    background-color: var(--emphasispurple);
+    transition: width 4s ease;
+}
+
+#divhover:hover #div2 {
+    width: 100%;
+}
+
+@media (max-width:1024px){
+.grid {
+    width: 100vw; 
+}
+
+.header nav ul {
+    flex-wrap: wrap;          
+    justify-content: center;  
+    gap: 1rem;                
+  }
+
+.header nav ul li a {
+    font-size: 2vw;          
+}
+.herochild h1 { 
+    font-size:5.5vw !important;
+}
+
+.herochild h2 { 
+    font-size:3vw !important;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;       
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 1.4vw;          
+}
+
+.footer a {
+    margin-left: 1rem;
+    font-size: 1.5vw;
+}
+
+#divhover {
+    font-size: 2vw;
+}
+}
+
+@media (max-width:600px){
+.header nav ul {
+    flex-direction: column;   
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.header nav ul li a {
+    padding: 0;
+    font-size: 3vw;
+}
+
+.footer .c1 p, .c2 a{
+    font-size: 1.8vw;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.herochild {
+    margin: 0 3% !important; 
+}
+
+.herochild h1 {
+    font-size:6vw !important;
+}
+
+.herochild h2 { 
+    font-size:2.8vw !important;
+}
+
+#divhover{
+    margin-top: 8%;
+    margin-bottom: 0;
+}
+
+#div1 {
+    height: 1vh;
+}
+}
+

@@ -1,0 +1,149 @@
+@import url("theme.css");
+
+.projectgrid a:visited{
+    color: var(--backgroundlight);
+}
+
+.projectgrid a:hover{
+    color: var(--emphasis);
+}
+
+.projectgrid a {
+    color: var(--backgroundlight);
+}
+
+.main .projectgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4vw;
+    padding: 2%;
+}
+
+.main .projectgrid .item{
+    transition: transform 0.3s ease-out;
+    background-color: var(--emphasispurple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.projectgrid .item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.main .projectgrid .item h3{
+    color: var(--backgroundlight);
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+.main .projectgrid .item p{
+    text-align: center;
+    font-size: 1vw;
+    color: var(--backgroundlight);
+}
+
+.main .projectgrid .item img{
+    width: 70%;
+    border:2px solid var(--emphasis);
+}
+
+.project {
+    padding: 0 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.project p {
+    font-size: 1.2vw;
+}
+
+.back {
+    display: none;
+}
+
+.projectbutton {
+    text-align: center;
+    max-width: 15%;
+    margin: 2% auto 0 auto;
+    border-radius: 5px;
+    background-color: var(--emphasisblue);
+    border: none;
+    text-align: center;
+    color: var(--backgroundlight);
+    font-size: 1.1vw;
+    padding: 1%;
+    transition: transform ease-out 0.5s;
+}
+
+.projectbutton a {
+    color: var(--backgroundlight);
+}
+
+.projectbutton:hover {
+    background-color: var(--emphasispurple);
+    transform: translateX(6%);
+}
+
+@media (max-width:1024px){
+.main .projectgrid {
+    grid-template-columns:1fr;
+    padding: 0 20vw;
+}
+
+.projectgrid .item p {
+    font-size: 1.6vw !important;
+}
+
+.item h3{
+    font-size: 2vw !important;
+}
+.gridblog {
+    grid-template-columns:1fr;
+    height:auto;
+}
+
+.articles>div{
+    flex-direction:row;
+    text-align:left;
+}
+
+.project p {
+    font-size: 2vw;
+}
+
+.project h2 {
+    font-size: 4vw !important;
+}
+
+.back {
+    display: block;
+}
+
+.projectbutton {
+    max-width: 35%;
+    padding: 2%;
+    font-size: 1.8vw;
+}
+}
+
+@media (max-width:460px) {
+.main .projectgrid {
+    padding: 0 5vw;
+}
+
+.projectgrid .item p {
+    font-size: 2.4vw !important;
+}
+
+.item h3{
+    font-size: 3.2vw !important;
+}
+
+}

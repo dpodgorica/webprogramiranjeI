@@ -1,0 +1,173 @@
+@import url("theme.css");
+
+.maincontact {
+    background-image: url("./../photo/t.png");
+}
+
+.gridcontact {
+    display: grid;
+    margin: 8% 15%;
+    padding: 5%;
+    gap: 10%;
+    grid-template-areas: "me you";
+    justify-content: center; 
+    align-content: center; 
+    background-color: var(--emphasispurple);
+    color: var(--backgroundlight);
+}
+
+.gridcontact button {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--backgroundlight);
+    color: var(--text);
+    padding: 10px 12px;
+    border: none;
+    transition: transform 0.5s ease-out;
+}
+
+.gridcontact a:visited {
+    color: var(--text);
+}
+
+.gridcontact button:hover {
+    background-color: var(--emphasis);
+    transform: scale(1.1);
+}
+
+.gridcontact .me,
+.gridcontact .you {
+  transform: translateY(30px); 
+  opacity: 0.4;                
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.gridcontact:hover .me,
+.gridcontact:hover .you {
+  transform: translateY(0); 
+  opacity: 1;                
+}
+
+.me {
+    grid-area: me;
+}
+
+.you {
+    grid-area: you;
+    padding: 2%;
+}
+
+.you div {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.you label {
+    margin: 0 10%;
+    font-weight: bold;
+}
+
+.you input[type="text"],
+.you input[type="email"] {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace;
+    width: 100%; 
+    padding: 8px 0;
+    border: none;
+    background-color: var(--backgroundlight); 
+    color: var(--text);
+    text-align: center;
+    font-size: 1vw;
+}
+
+.you textarea {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace;
+    width: 100%; 
+    resize: none;
+    text-align: left;
+    background-color: var(--backgroundlight); 
+    color: var(--text);
+    padding: 2%;
+}
+
+.me p, .you label {
+    font-size: 1.2vw;
+}
+
+.you textarea{
+    font-size: 1vw;
+}
+
+.me button, .you button {
+    font-size: 1vw;
+    padding: 4% 6%;
+    margin-top: 10%;
+}
+
+@media (max-width:1024px){
+.gridcontact{
+    grid-template-areas:"me" "you";
+    margin:2% 8%;
+    padding: 8% 0;
+    gap:4%
+}
+
+.gridcontact .me,
+.gridcontact .you {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.maincontact h1 {
+    padding:20px 0;
+    font-size:5vw;
+}
+
+.you div {
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.me p, .you p, .you label, #ime, #email {
+    font-size: 2.6vw;
+    margin:0 0 8px;
+}
+
+#ime, #email {
+    font-size: 2vw;
+}
+
+.you input, .you textarea {
+    width:100%;
+    font-size:1.8vw;
+}
+
+  
+.gridcontact button {
+    width:100%;
+    padding:10px;
+    font-size:2vw;
+}
+}
+
+@media (max-width:460px) {
+.maincontact h1 {
+    font-size:7vw;
+}
+
+.me p, .you p, .you label, .you textarea, .you input, .you input::placeholder {
+    font-size: 4vw;
+}
+
+#ime, #email {
+    font-size: 3vw
+}
+
+.gridcontact button {
+    padding:8px;
+    font-size:3vw;
+}
+}

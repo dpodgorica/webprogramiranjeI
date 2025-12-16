@@ -1,0 +1,116 @@
+@import url("theme.css");
+
+.main .omeni{
+    display: grid;
+    grid-template-columns: 1.8fr 1fr; 
+}
+.text{
+    font-size: 1.2vw;
+    margin-bottom: 0;
+}
+
+.main .omeni .text{
+    justify-content: left;
+}
+
+.main .omeni .photo {
+    text-align: center;
+    padding: 6vw 3vw 3vw 2vw;
+}
+
+.photo img {
+    width: 90%;
+}
+
+.main a:visited{
+    color: var(--text);
+}
+
+.article a:visited {
+    color: var(--backgroundlight);
+}
+
+.main a:hover{
+    color: var(--emphasisblue);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+.skill {
+    width: 100%; 
+    background-color: #7d5d6c40; 
+    margin: 20px 0; 
+}
+
+.skill > div {
+    margin: 0;
+    width: 8em; 
+    height: 100%; 
+    background-color: var(--emphasispurple); 
+    padding: 15px; 
+    transition: width 1s ease-in-out; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--backgroundlight);
+    font-size: 1vw;
+}
+
+.cppskill:hover {
+    width: 65%; 
+}
+
+.pythonskill:hover {
+    width: 45%; 
+}
+
+.sqlskill:hover {
+    width: 50%; 
+}
+
+.javaskill:hover {
+    width: 45%; 
+}
+
+.hcskill:hover {
+    width: 30%; 
+}
+
+@media (max-width:1024px){
+.main .omeni {
+    grid-template-columns:1fr;
+} 
+
+.photo img {
+    width:55%;
+}
+
+h1 {
+    font-size:3.5vw;
+}
+
+.skill h2{
+    font-size:3.5vw;
+    margin-bottom:1rem;
+}
+
+.skill>div{
+    font-size:1.5vw;
+    padding:12px;
+}
+
+.omeni p, .text p {
+    font-size: 1.8vw;
+    padding: 0 1.8vw;
+}
+}
+
+@media (max-width:460px) {
+.omeni p, .text p {
+    font-size:2.8vw;
+}
+}

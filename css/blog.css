@@ -1,0 +1,178 @@
+@import url("theme.css");
+
+.gridblog {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    min-height: 50vh; 
+}
+
+
+.right{
+    height: auto;
+}
+
+.articles > div, .right > div {
+    padding: 3%;
+    background-color: var(--emphasis);
+    margin: 5%;
+    gap: 5%;
+    color: var(--backgroundlight);
+}
+
+.articles>div {
+    display: flex;
+    flex-direction: row;
+}
+
+.article img {
+    width: 25%;
+    border: 2px solid var(--backgroundlight);
+}
+
+.article, .item p {
+    font-size: 1vw;
+    align-items: center;
+}
+
+.italica {
+    color: var(--backgroundlight);
+}
+
+.right>div {
+    border-radius: 12px 0  0 12px;
+}
+
+#i12 {
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+  padding-top: 0;
+}
+
+#i11:hover + #i12 {
+  opacity: 1;
+}
+
+#i11 {
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  margin-bottom: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#i11:hover {
+  opacity: 0;
+}
+
+.blogpost {
+    padding: 0 8vw;
+    font-size: 1.1vw;
+}
+
+.blogpost figcaption {
+    font-size: 0.9vw;
+}
+
+.blogpost h4 {
+    text-align: left;
+    font-size: 1.4vw;
+    margin-bottom: 0;
+    padding: 0 1vw;
+    border-left: 1vw solid var(--emphasisblue);
+}
+
+.blogpost figure{
+    text-align: center;
+}
+
+.blogpost>p {
+    padding: 0 0 0 3vw;
+}
+
+.blogpost li {
+    margin: 0 0 0 3vw;
+}
+
+.blogpost img {
+    width: 85%;
+}
+
+.blogbutton {
+    text-align: center;
+    max-width: 15%;
+    margin: 2% auto 1% auto;
+    border-radius: 5px;
+    background-color: var(--emphasisblue);
+    border: none;
+    text-align: center;
+    color: var(--backgroundlight);
+    font-size: 1.1vw;
+    padding: 1%;
+    transition: transform ease-out 0.5s;
+}
+
+.blogbutton a {
+    color: var(--backgroundlight);
+}
+
+.blogbutton:hover {
+    background-color: var(--emphasispurple);
+    transform: translateX(6%);
+}
+
+@media (max-width:1024px){
+.gridblog {
+    grid-template-columns:1fr;
+    height:auto;
+}
+
+.articles>div{
+    flex-direction:row;
+    text-align:left;
+}
+
+.article img {
+    width:25%;
+}
+
+.right>div {
+    padding:4%;
+}
+
+.item div>p {
+    font-size: 2vw;
+}
+
+.blogpost h4 {
+     font-size: 2vw;
+}
+
+.blogpost li {
+    font-size: 1.4vw;
+}
+
+.blogbutton {
+    max-width: 35%;
+    padding: 2%;
+    font-size: 1.8vw;
+}
+}
+
+@media (max-width:460px) {
+.article img {
+    width:35%;
+    margin:0 1rem 1rem 0;
+}
+
+.blogpost h4 {
+     font-size: 3vw;
+}
+
+.blogpost li {
+    font-size: 2.2vw;
+}
+
+.article img {
+    display:none;
+}
+}
